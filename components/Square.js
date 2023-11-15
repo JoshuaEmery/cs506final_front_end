@@ -5,8 +5,8 @@ import { useState } from "react";
 export default function Square({ text, onPress }) {
   return (
     <View style={styles.square}>
-      <Pressable style={styles.button} onPress={() => console.log(text)}>
-        <Text>{text}</Text>
+      <Pressable style={styles.button} onPress={onPress}>
+        <Text style={styles.text}>{text}</Text>
       </Pressable>
     </View>
   );
@@ -25,5 +25,9 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
+  },
+  text: {
+    fontSize: 50,
+    fontWeight: "bold",
   },
 });
